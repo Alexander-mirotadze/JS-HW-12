@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
@@ -121,10 +124,14 @@
     <main id="main">
       <div id="UsersPageDiv">
         <div id="users-wraper">
-          <input id="filter-input" type="text" placeholder="Search">
+          <input id="filter-input" type="text" placeholder="Search" />
         </div>
         <div id="closeUsersPage">
-          <i id="closeIcon" class="fa-solid fa-rectangle-xmark fa-2xl" style="color: #000000;"></i>
+          <i
+            id="closeIcon"
+            class="fa-solid fa-rectangle-xmark fa-2xl"
+            style="color: #000000"
+          ></i>
         </div>
       </div>
       <!-- ! section # 1 -->
@@ -380,51 +387,106 @@
           </ul>
         </div>
         <div class="section__2--rightBlock">
-          <form class="section__2--rightBlock-forms" action="#">
-            <div class="section__2--rightBlock--nameContainer">
+          <form
+            id="form-wraper"
+            class="section__2--rightBlock-forms"
+            action=""
+            method="post"
+          >
+            <!-- firstName -->
+            <div>
               <input
                 class="section__2--inputs firstName"
                 type="text"
                 name="firstName"
                 id="firstName"
                 placeholder="First Name *"
-                required
               />
+            </div>
+            <p id="error-firstName" class="error-text"></p>
+            <!-- lastName -->
+            <div>
               <input
                 class="section__2--inputs lastName"
                 type="text"
                 name="lastName"
                 id="lastName"
                 placeholder="Last Name *"
-                required
               />
             </div>
-            <input
-              class="section__2--inputs email"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email *"
-              required
-            />
-            <input
-              class="section__2--inputs phone"
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="Phone Number *"
-              required
-              pattern="[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{2}"
-            />
+            <p id="error-lastName" class="error-text"></p>
+            <!-- password -->
+            <div>
+              <input
+                class="section__2--inputs"
+                id="password"
+                name="passw1"
+                type="password"
+                placeholder="Enter password *"
+              />
+              <i id="showPass1" class="fa-solid fa-eye"></i>
+            </div>
+            <p id="error-passw1" class="error-text"></p>
+            <!-- rep password -->
+            <div>
+              <input
+                class="section__2--inputs"
+                id="repeatPassword"
+                name="passw2"
+                type="password"
+                placeholder="Repeat password *"
+              />
+              <i id="showPass2" class="fa-solid fa-eye"></i>
+            </div>
+            <p id="error-passw2" class="error-text"></p>
+            <!-- email -->
+            <div>
+              <input
+                class="section__2--inputs email"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email *"
+              />
+            </div>
+            <p id="valiEemail" class="error-text"></p>
+            <!-- gender -->
+            <div class="gender__wraper">
+              <label for="male">Male</label>
+              <input id="male" name="radio" type="radio" />
+              <label for="female">Female</label>
+              <input id="female" name="radio" type="radio" />
+            </div>
+            <p id="error-radio" class="error-text"></p>
+            <!-- phone -->
+            <div>
+              <input
+                class="section__2--inputs phone"
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Phone Number *"
+                pattern="[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{2}"
+              />
+            </div>
+            <p id="error-phone" class="error-text"></p>
             <!-- <label class="phoneFormat" for="phone">Format: 123-45-67-89</label> -->
-            <textarea
-              class="textArea"
-              name="textArea"
-              id="textArea"
-              placeholder="Your message ..."
-              required
-            ></textarea
-            ><button class="sendMessage" type="submit">Send Message</button>
+            <!-- check box -->
+            <div>
+              <input id="checkBox" name="checkbox" type="checkbox" />
+              <label for="checkBox">I agree terms</label>
+            </div>
+            <p id="error-checkbox" class="error-text"></p>
+            <div>
+              <textarea
+                class="textArea"
+                name="textArea"
+                id="textArea"
+                placeholder="Your message ..."
+              ></textarea>
+            </div>
+            <button class="reset-btn" type="reset">Reset</button>
+            <button class="sendMessage" type="submit">Send Message</button>
           </form>
         </div>
       </section>

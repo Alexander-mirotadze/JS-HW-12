@@ -102,7 +102,7 @@
   height: 100%;
   background-color: #00fff0;
 }
-#active-User{
+#active-User {
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -113,7 +113,7 @@
   height: 100%;
   border-radius: 100px;
 }
-#UsersPageDiv{
+#UsersPageDiv {
   display: none;
 }
 #UsersPageDiv.changeing-user-page {
@@ -126,12 +126,16 @@
   margin-top: 50px;
   margin-left: 20px;
 }
-#UsersPageDiv li{
+#UsersPageDiv li {
+  font-family: "Oooh Baby";
+  font-size: 24px;
+  font-weight: 900;
+  color: #011334;
   width: fit-content;
   cursor: pointer;
 }
-#filter-input{
-  width: 300px;
+#filter-input {
+  width: 200px;
   height: 30px;
   margin-left: 20px;
   border-radius: 4px;
@@ -244,7 +248,6 @@
 .section__2--rightBlock {
   max-width: 565px;
   width: 48%;
-  min-height: 500px;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
   display: flex;
@@ -255,10 +258,8 @@
 .section__2--rightBlock-forms {
   max-width: 465px;
   width: 90%;
-  min-height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   /* background-color: green; */
 }
 .section__2--rightBlock--nameContainer {
@@ -270,7 +271,9 @@
   width: 48%;
 }
 .section__2--inputs {
+  width: 90%;
   height: 50px;
+  margin-top: 10px;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
   font-size: 14px;
@@ -288,7 +291,8 @@
 
 } */
 .textArea {
-  width: 100%;
+  margin-top: 10px;
+  width: 90%;
   min-height: 150px;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
@@ -299,7 +303,25 @@
 .textArea::placeholder {
   color: black;
 }
+.error-text {
+  color: red;
+  font-size: 18px;
+  height: 10px;
+  margin: 10px 0;
+}
 .sendMessage {
+  margin-bottom: 20px;
+  width: 90%;
+  height: 45px;
+  border-radius: 36px;
+  font-weight: 700;
+  background-color: #00fff0;
+  color: white;
+  cursor: pointer;
+}
+.reset-btn {
+  margin: 20px 0;
+  width: 90%;
   height: 45px;
   border-radius: 36px;
   font-weight: 700;
