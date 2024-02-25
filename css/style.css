@@ -1,0 +1,379 @@
+.body {
+  padding-top: 90px;
+  /* height: 2000px;
+    background-color: yellow; */
+}
+.header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  background-color: #ffffff;
+  /* background-color: red; */
+}
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: green; */
+}
+.logo {
+  width: 82px;
+  height: 55px;
+  /* background-color: green; */
+}
+.logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.navbar__links {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+.navbar--link {
+  font-family: "Oooh Baby";
+  font-size: 24px;
+  font-weight: 900;
+  color: #011334;
+  transition: all 0.2s linear;
+}
+.navbar--link:hover {
+  border-bottom: solid 1px #00fff0;
+  color: #00fff0;
+}
+.searchBar {
+  display: none;
+}
+.searchBar.unhidden-search {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin: 10px auto;
+  width: 88%;
+  /* background-color: green; */
+}
+.searchBar__line {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  color: #011334;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #00fff0;
+}
+.searchBar__line::placeholder {
+  color: #00fff0;
+}
+.searchBar__btn {
+  width: 100px;
+  height: 20px;
+  border-radius: 4px;
+  color: #ffff;
+  background-color: #00fff0;
+  cursor: pointer;
+}
+.searchIcon {
+  transition: all 0.2s linear;
+}
+.searchIcon:hover {
+  cursor: pointer;
+}
+.searchIcon:hover path {
+  fill: #00fff0;
+}
+.btnDonate {
+  width: 145px;
+  height: 38px;
+  border-radius: 24px;
+  background-color: #00fff0;
+  color: #ffffff;
+  cursor: pointer;
+}
+.changeing-user-page {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background-color: #00fff0;
+}
+#active-User{
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+#active-User img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+#UsersPageDiv{
+  display: none;
+}
+#UsersPageDiv.changeing-user-page {
+  display: block;
+}
+#UsersPageDiv ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+#UsersPageDiv li{
+  width: fit-content;
+  cursor: pointer;
+}
+#filter-input{
+  width: 300px;
+  height: 30px;
+  margin-left: 20px;
+  border-radius: 4px;
+  margin-top: 50px;
+  background-color: white;
+}
+#closeUsersPage {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+.burgerBar {
+  display: none;
+}
+/* ! Section # 1 */
+.slideimages {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* .alex-class-pagination{
+  background-color: rgba(0, 255, 255, 0.8) ;
+  color: rgba(0, 255, 255, 0.8);
+} */
+.alex-class-page {
+  background-color: rgba(0, 255, 255, 0.8);
+  color: rgba(0, 255, 255, 0.8);
+}
+.alex-class-back {
+  background-color: #00fff0;
+  color: #00fff0;
+  width: 60px;
+  height: 60px;
+}
+.alex-class-forward {
+  background-color: #00fff0;
+  color: #00fff0;
+  width: 60px;
+  height: 60px;
+}
+/* ! Section # 2 */
+.section__2 {
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.section__2--leftBlock {
+  max-width: 565px;
+  width: 48%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 50px;
+  /* background-color: red; */
+}
+.section__2--leftBlock--top {
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+.section__2--leftBlock--top-h2 {
+  width: 100%;
+  font-family: "Oooh Baby";
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 900;
+  color: #011334;
+}
+.section__2--leftBlock--top-p {
+  width: 100%;
+  font-family: "Oooh Baby";
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #011334;
+}
+.section__2--leftBlock-bottom {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: green; */
+}
+.section__2--leftBlock-bottom-li {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.section__2--leftBlock-bottom-li img {
+  height: 20px;
+  width: 20px;
+}
+.section__2--leftBlock-bottom-li a {
+  color: #011334;
+  font-family: "Oooh Baby";
+  font-size: 18px;
+  font-weight: 900;
+  transition: all 0.2s linear;
+}
+.section__2--leftBlock-bottom-li a:hover {
+  border-bottom: solid 1px #00fff0;
+}
+.section__2--rightBlock {
+  max-width: 565px;
+  width: 48%;
+  min-height: 500px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+.section__2--rightBlock-forms {
+  max-width: 465px;
+  width: 90%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: green; */
+}
+.section__2--rightBlock--nameContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section__2--rightBlock--nameContainer input {
+  width: 48%;
+}
+.section__2--inputs {
+  height: 50px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #011334;
+  font-weight: 400;
+}
+.section__2--inputs::placeholder {
+  color: black;
+}
+/* .phoneFormat{
+  color: #00fff0;
+  font-family: "Oooh Baby";
+  font-size: 18px;
+  font-weight: 900;
+
+} */
+.textArea {
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+.textArea::placeholder {
+  color: black;
+}
+.sendMessage {
+  height: 45px;
+  border-radius: 36px;
+  font-weight: 700;
+  background-color: #00fff0;
+  color: white;
+  cursor: pointer;
+}
+.footer__wraper {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+/* ! Response */
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+  .navbar.nav-bar-burger {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 90px;
+    background: linear-gradient(45deg, #00fff0, #bfffff, #f2ffff);
+  }
+  .navbar__links {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 7%;
+  }
+  .burgerBar {
+    width: 38px;
+    height: 38px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5%;
+    background-color: #00fff0;
+  }
+  .burgerBar__lines {
+    width: 80%;
+    height: 10%;
+    border-radius: 20px;
+    background-color: #ffffff;
+  }
+}
+@media (max-width: 481px) {
+  .btnDonate {
+    width: 80px;
+  }
+  .containerRight__h1 {
+    font-size: 32px;
+  }
+  .section__2 {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 60px;
+  }
+  .section__2--leftBlock {
+    width: 96%;
+  }
+  .section__2--rightBlock {
+    width: 96%;
+  }
+  .footer__wraper {
+    width: 96%;
+  }
+  .footer__wraper img {
+    height: 30px;
+    width: 100px;
+  }
+}

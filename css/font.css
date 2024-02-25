@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Oooh Baby';
+    src: url('../fonts/oooh-baby/');
+    src: url('../fonts/oooh-baby/?#iefix') format('embedded-opentype'),
+        url('../fonts/oooh-baby/OoohBaby-Regular.woff2') format('woff2'),
+        url('../fonts/oooh-baby/OoohBaby-Regular.woff') format('woff'),
+        url('../fonts/oooh-baby/OoohBaby-Regular.ttf') format('truetype'),
+        url('../fonts/oooh-baby/OoohBaby-Regular.svg#OoohBaby-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
