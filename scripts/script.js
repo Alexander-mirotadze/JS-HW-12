@@ -99,7 +99,7 @@ var splide = new Splide("#banner-slider", {
   padding: "5rem",
   perPage: 2,
   breakpoints: {
-    1200: { arrows: false },
+    1200: { arrows: true },
     800: { perPage: 1 },
     640: {},
   },
@@ -110,8 +110,8 @@ var splide = new Splide("#banner-slider", {
     // Add classes for arrows.
     arrows: "splide__arrows alex-class-arrows",
     arrow: "splide__arrow alex-class-arrow",
-    prev: "splide__arrow--prev alex-class-back",
-    next: "splide__arrow--next alex-class-forward",
+    prev: "splide__arrow--prev alex-class-arrows",
+    next: "splide__arrow--next alex-class-arrows",
 
     // Add classes for pagination.
     pagination: "splide__pagination alex-class-pagination", // container

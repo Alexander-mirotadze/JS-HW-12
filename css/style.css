@@ -169,17 +169,9 @@
   background-color: rgba(0, 255, 255, 0.8);
   color: rgba(0, 255, 255, 0.8);
 }
-.alex-class-back {
+.alex-class-arrows {
   background-color: #00fff0;
-  color: #00fff0;
-  width: 60px;
-  height: 60px;
-}
-.alex-class-forward {
-  background-color: #00fff0;
-  color: #00fff0;
-  width: 60px;
-  height: 60px;
+  background-color: rgb(0, 255, 255);
 }
 /* ! Section # 2 */
 .section__2 {
