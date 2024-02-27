@@ -17,7 +17,10 @@ const activeUserdiv = document.getElementById("active-User");
 const usersPage = document.getElementById("UsersPageDiv");
 const usersWraper = document.getElementById("users-wraper");
 const closeIcon = document.getElementById("closeIcon");
+const input = document.getElementById("filter-input");
 const ulUsers = document.createElement("ul");
+const listOfUsers = [];
+
 
 activeUserdiv.addEventListener("click", function () {
   usersPage.classList.add("changeing-user-page");
@@ -39,6 +42,7 @@ activeUserdiv.addEventListener("click", function () {
           usersImg.setAttribute("src", element.avatar);
           usersImg.setAttribute("alt", "User-image");
 
+          
           liUsers.addEventListener("click", function () {
             activeUserdiv.innerHTML = "";
             activeUserdiv.appendChild(usersImg);
@@ -46,10 +50,33 @@ activeUserdiv.addEventListener("click", function () {
             ulUsers.innerHTML = "";
           });
 
+
+          listOfUsers.push(liUsers);
           ulUsers.appendChild(liUsers);
           usersWraper.appendChild(ulUsers);
+
+        });
+
+        // filter
+        function filterUsers(searchInpuTValue) {
+          listOfUsers.forEach(function (eachLiUser) {
+            if (
+              eachLiUser.textContent
+                .toLowerCase()
+                .includes(searchInpuTValue.toLowerCase().trim())
+            ) {
+              eachLiUser.classList.remove("hide-user");
+            } else {
+              eachLiUser.classList.add("hide-user");
+            }
+          });
+        }
+
+        input.addEventListener("keyup", function () {
+          filterUsers(this.value);
         });
       })
+
       .catch(function (error) {
         if (error == 404) {
           console.log("Page Not Found");
@@ -66,10 +93,16 @@ closeIcon.addEventListener("click", function () {
 });
 
 //! slider
-var splide = new Splide(".splide", {
+// ---banner
+var splide = new Splide("#banner-slider", {
   type: "loop",
   padding: "5rem",
   perPage: 2,
+  breakpoints: {
+    1200: { arrows: false },
+    800: { perPage: 1 },
+    640: {},
+  },
   // wheel: true,
   autoplay: true,
   interval: 3000,
@@ -88,6 +121,17 @@ var splide = new Splide(".splide", {
 
 splide.mount();
 
+// --- body
+
+var splide = new Splide("#body-slider", {
+  perPage: 3,
+  rewind: true,
+  autoplay: true,
+  interval: 5000,
+});
+
+splide.mount();
+
 // ! form validation
 
 const formElement = document.getElementById("form-wraper");
@@ -101,14 +145,10 @@ formElement.addEventListener("submit", function (e) {
     errors.firstName = "Please enter you name";
   }
 
-
-
   let lastNameValue = document.getElementById("lastName").value;
   if (lastNameValue == "") {
     errors.lastName = "Please enter you lastname";
   }
-
-
 
   let passwordValue = document.getElementById("password").value;
   let passwordRepeat = document.getElementById("repeatPassword").value;
@@ -117,8 +157,9 @@ formElement.addEventListener("submit", function (e) {
   let repPasswordLine = document.getElementById("repeatPassword");
 
   if (passwordValue == "") {
-    errors.passw1 = "Please enter you password";
+    // errors.passw1 = "Please enter you password";
     passwordLine.style.border = "2px solid red";
+    return alert("Please enter you password");
   } else if (!passwordValue.match(passwordRegex)) {
     errors.passw1 = "6-20 symbol {A-z & Number(s)}";
     passwordLine.style.border = "2px solid red";
@@ -126,7 +167,9 @@ formElement.addEventListener("submit", function (e) {
     passwordLine.style.border = "2px solid green";
   }
 
-  if (passwordValue != passwordRepeat) {
+  if (passwordRepeat == "") {
+    return alert("Please repeat your password");
+  } else if (passwordValue != passwordRepeat) {
     errors.passw2 = "Password is not match";
     repPasswordLine.style.border = "2px solid red";
   } else if (passwordRepeat == "") {
@@ -134,8 +177,6 @@ formElement.addEventListener("submit", function (e) {
   } else {
     repPasswordLine.style.border = "2px solid green";
   }
-
-
 
   let radio = false;
   formElement.querySelectorAll('[name="radio"]').forEach((gendreItems) => {
@@ -147,15 +188,11 @@ formElement.addEventListener("submit", function (e) {
     errors.radio = "Please check you gender";
   }
 
-
-
   let checkBox = document.getElementById("checkBox").checked;
   if (checkBox != true) {
     errors.checkbox = "You need to agree terms";
   }
 
-
-  
   formElement.querySelectorAll(".error-text").forEach((formChildeElements) => {
     formChildeElements.textContent = "";
   });
@@ -233,3 +270,10 @@ function emailValidation() {
 }
 
 email.addEventListener("keyup", emailValidation);
+
+// const allInputElements = document.querySelectorAll(".section__2--inputs");
+// const reset = document.querySelector(".reset-btn");
+// reset.addEventListener("click", function () {
+//   // formElement.reset();
+//   allInputElements.style.border = "1px solid #bdbdbd";
+// });

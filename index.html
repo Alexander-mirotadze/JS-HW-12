@@ -135,7 +135,11 @@
         </div>
       </div>
       <!-- ! section # 1 -->
-      <section class="splide" aria-label="Splide Basic HTML Example">
+      <section
+        class="splide"
+        aria-label="Splide Basic HTML Example"
+        id="banner-slider"
+      >
         <div class="splide__arrows splide__arrows--ltr">
           <button
             class="splide__arrow splide__arrow--prev"
@@ -221,6 +225,62 @@
               Questions, comments, or suggestions? Simply fill in the form and
               we'll be in touch shortly.
             </p>
+          </div>
+          <div class="section__2--leftBlock--middle">
+            <h2 class="section__2--leftBlock--middle-h2">Our Team</h2>
+            <div
+              id="body-slider"
+              class="splide"
+              role="group"
+              aria-label="Splide Basic HTML Example"
+            >
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img
+                      class="body-slider-img"
+                      src="https://as1.ftcdn.net/v2/jpg/05/09/05/44/1000_F_509054477_Lx2S4SqkwiItT1gR9CoFuSFAhEwCV3wg.jpg"
+                      alt="worker1"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      class="body-slider-img"
+                      src="https://t3.ftcdn.net/jpg/03/58/93/04/240_F_358930412_rodvr4vvY4LG0bUG8MKC3wwCZhWGozcW.jpg"
+                      alt="worker2"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      class="body-slider-img"
+                      src="https://t3.ftcdn.net/jpg/05/17/96/20/240_F_517962042_PssY3rZpOEpC9LN0kiF3t5m3vdn18LXd.jpg"
+                      alt="worker3"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      class="body-slider-img"
+                      src="https://t4.ftcdn.net/jpg/02/71/62/35/240_F_271623565_qc4v020cmYDq4JeVTxVIDRJgmXFTfWOM.jpg"
+                      alt="worker4"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      class="body-slider-img"
+                      src="https://t3.ftcdn.net/jpg/04/22/89/74/240_F_422897447_RjOpKgzGPTJs6Aw7I5DFP18OTt7uoEk5.jpg"
+                      alt="worker5"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      class="body-slider-img"
+                      src="https://t4.ftcdn.net/jpg/03/05/70/15/240_F_305701514_vSBfDjhqabBSnx1bR2HX1l0vbJ0kziJk.jpg"
+                      alt="worker6"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <ul class="section__2--leftBlock-bottom">
             <li class="section__2--leftBlock-bottom-li">
@@ -461,6 +521,7 @@
             <!-- phone -->
             <div>
               <input
+                class="section__2--inputs"
                 class="section__2--inputs phone"
                 type="tel"
                 name="phone"
@@ -500,7 +561,14 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+      id="banner-slider"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+      id="body-slider"
+    ></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
