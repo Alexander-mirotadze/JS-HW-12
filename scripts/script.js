@@ -132,6 +132,7 @@ var splide = new Splide("#body-slider", {
   rewind: true,
   autoplay: true,
   interval: 5000,
+  speed: 3000,
   classes: {
     // Add classes for arrows.
     arrows: "splide__arrows alex2-class-arrows",
