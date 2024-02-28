@@ -43,8 +43,8 @@
   transition: all 0.2s linear;
 }
 .navbar--link:hover {
-  border-bottom: solid 1px #00AFAA;
-  color: #00AFAA;
+  border-bottom: solid 1px #00afaa;
+  color: #00afaa;
 }
 .searchBar {
   display: none;
@@ -64,17 +64,17 @@
   color: #011334;
   font-size: 14px;
   font-weight: 500;
-  border-bottom: 1px solid #10405A;
+  border-bottom: 1px solid #10405a;
 }
 .searchBar__line::placeholder {
-  color: #10405A;
+  color: #10405a;
 }
 .searchBar__btn {
   width: 100px;
   height: 20px;
   border-radius: 4px;
   color: #ffff;
-  background-color: #10405A;
+  background-color: #10405a;
   cursor: pointer;
 }
 .searchIcon {
@@ -84,13 +84,13 @@
   cursor: pointer;
 }
 .searchIcon:hover path {
-  fill: #00AFAA;
+  fill: #00afaa;
 }
 .btnDonate {
   width: 145px;
   height: 38px;
   border-radius: 24px;
-  background-color: #10405A;
+  background-color: #10405a;
   color: #ffffff;
   cursor: pointer;
 }
@@ -101,12 +101,12 @@
   z-index: 99999;
   width: 100%;
   height: 100%;
-  background-color: #00AFAA;
+  background-color: #00afaa;
 }
 #active-User {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
 }
 #active-User img {
@@ -166,21 +166,21 @@
   background-color: rgba(0, 255, 255, 0.8) ;
 } */
 .splide__pagination__page.alex-class-page {
-  background-color: #10405A;
+  background-color: #10405a;
   width: 20px;
   height: 20px;
 }
-.splide__pagination__page.alex-class-page.is-active{
-background-color: #10405A;
-border: 2px solid #7BC794;
+.splide__pagination__page.alex-class-page.is-active {
+  background-color: #10405a;
+  border: 2px solid #7bc794;
 }
 .splide__arrow.alex-class-arrows {
   width: 60px;
   height: 50px;
-  background: #10405A;
-  border: 2px solid #7BC794;
+  background: #10405a;
+  border: 2px solid #7bc794;
 }
-.splide__arrow svg.finger{
+.splide__arrow svg.finger {
   width: 60%;
   height: 60%;
 }
@@ -248,24 +248,24 @@ border: 2px solid #7BC794;
   object-fit: cover;
   border-radius: 4px;
 }
-.splide__pagination__page.alex2-class-page{
-  background-color: #10405A;
+.splide__pagination__page.alex2-class-page {
+  background-color: #10405a;
   width: 10px;
   height: 10px;
 }
 .splide__pagination__page.alex2-class-page.is-active {
-  background-color: #10405A;
-  border: 2px solid #7BC794;
+  background-color: #10405a;
+  border: 2px solid #7bc794;
 }
 .splide__arrow.alex2-class-arrows {
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background: #10405A;
-  border: 2px solid #7BC794;
+  background: #10405a;
+  border: 2px solid #7bc794;
 }
 .splide__arrow.alex2-class-arrows svg {
-  fill: #7BC794;
+  fill: #7bc794;
 }
 .section__2--leftBlock-bottom {
   width: 100%;
@@ -294,8 +294,8 @@ border: 2px solid #7BC794;
   transition: all 0.2s linear;
 }
 .section__2--leftBlock-bottom-li a:hover {
-  border-bottom: solid 1px #00AFAA;
-  color: #00AFAA;
+  border-bottom: solid 1px #00afaa;
+  color: #00afaa;
 }
 .section__2--rightBlock {
   max-width: 565px;
@@ -367,7 +367,7 @@ border: 2px solid #7BC794;
   height: 45px;
   border-radius: 36px;
   font-weight: 700;
-  background-color: #10405A;
+  background-color: #10405a;
   color: white;
   cursor: pointer;
 }
@@ -377,7 +377,7 @@ border: 2px solid #7BC794;
   height: 45px;
   border-radius: 36px;
   font-weight: 700;
-  background-color: #10405A;
+  background-color: #10405a;
   color: white;
   cursor: pointer;
 }
@@ -405,11 +405,13 @@ border: 2px solid #7BC794;
     justify-content: flex-end;
     position: fixed;
     top: 90px;
-    background: linear-gradient(45deg, #00AFAA, #f2ffff, #f2ffff);
+    background: linear-gradient(45deg, #00afaa, #f2ffff, #f2ffff);
   }
   .navbar__links {
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    margin-top: 30px;
+    row-gap: 30px;
     margin-right: 7%;
   }
   .burgerBar {
@@ -421,7 +423,7 @@ border: 2px solid #7BC794;
     align-items: center;
     justify-content: center;
     row-gap: 5%;
-    background-color: #10405A;
+    background-color: #10405a;
   }
   .burgerBar__lines {
     width: 80%;
@@ -440,7 +442,7 @@ border: 2px solid #7BC794;
   .splide__arrow.alex-class-arrows {
     width: 40px;
     height: 30px;
-    background: #10405A;
+    background: #10405a;
   }
   .section__2 {
     flex-direction: column-reverse;
