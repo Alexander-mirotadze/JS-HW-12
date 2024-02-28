@@ -165,13 +165,18 @@
   background-color: rgba(0, 255, 255, 0.8) ;
   color: rgba(0, 255, 255, 0.8);
 } */
-.alex-class-page {
+.splide__pagination__page.alex-class-page {
   background-color: rgba(0, 255, 255, 0.8);
   color: rgba(0, 255, 255, 0.8);
 }
-.alex-class-arrows {
-  background-color: #00fff0;
-  background-color: rgb(0, 255, 255);
+.splide__arrow.alex-class-arrows {
+  width: 60px;
+  height: 50px;
+  background: #00fff0;
+}
+.splide__arrow svg.finger{
+  width: 60%;
+  height: 60%;
 }
 /* ! Section # 2 */
 .section__2 {

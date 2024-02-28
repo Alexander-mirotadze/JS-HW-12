@@ -105,7 +105,8 @@ var splide = new Splide("#banner-slider", {
   },
   // wheel: true,
   autoplay: true,
-  interval: 3000,
+  interval: 5000,
+  speed: 3000,
   classes: {
     // Add classes for arrows.
     arrows: "splide__arrows alex-class-arrows",
@@ -124,6 +125,7 @@ splide.mount();
 // --- body
 
 var splide = new Splide("#body-slider", {
+  type: "loop",
   perPage: 3,
   rewind: true,
   autoplay: true,
