@@ -125,11 +125,24 @@ splide.mount();
 // --- body
 
 var splide = new Splide("#body-slider", {
-  type: "loop",
-  perPage: 3,
+  direction: 'ttb',
+  height   : '400px',
+  type: "slide",
+  perPage: 1,
   rewind: true,
   autoplay: true,
   interval: 5000,
+  classes: {
+    // Add classes for arrows.
+    arrows: "splide__arrows alex2-class-arrows",
+    arrow: "splide__arrow alex2-class-arrow",
+    prev: "splide__arrow--prev alex2-class-arrows",
+    next: "splide__arrow--next alex2-class-arrows",
+
+    // Add classes for pagination.
+    pagination: "splide__pagination alex2-class-pagination", // container
+    page: "splide__pagination__page alex2-class-page", // each button
+  },
 });
 
 splide.mount();

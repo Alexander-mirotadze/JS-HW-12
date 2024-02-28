@@ -226,7 +226,7 @@ border: 2px solid #7BC794;
   color: #011334;
 }
 .section__2--leftBlock--middle {
-  min-height: 200px;
+  min-height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -235,13 +235,35 @@ border: 2px solid #7BC794;
 }
 .section__2--leftBlock--middle-h2 {
   width: 100%;
+  height: 50px;
   font-family: "Oooh Baby";
   font-size: 36px;
   line-height: 48px;
   font-weight: 900;
   color: #011334;
 }
-
+.body-slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.splide__pagination__page.alex2-class-page{
+  background-color: #10405A;
+  width: 10px;
+  height: 10px;
+}
+.splide__pagination__page.alex2-class-page.is-active {
+  background-color: #10405A;
+  border: 2px solid #7BC794;
+}
+.splide__arrow.alex2-class-arrows {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #10405A;
+  border: 2px solid #7BC794;
+}
 .section__2--leftBlock-bottom {
   width: 100%;
   height: 200px;
@@ -271,10 +293,6 @@ border: 2px solid #7BC794;
 .section__2--leftBlock-bottom-li a:hover {
   border-bottom: solid 1px #00AFAA;
   color: #00AFAA;
-}
-.body-slider-img {
-  width: 100%;
-  height: 200px;
 }
 .section__2--rightBlock {
   max-width: 565px;
