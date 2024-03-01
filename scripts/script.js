@@ -191,6 +191,12 @@ formElement.addEventListener("submit", function (e) {
     errors.radio = "Please check you gender";
   }
 
+  let phone = document.getElementById("Phone").value;
+  if(phone == ""){
+    errors.phone = "Please enter Phone number: 5XX 12 34 56 "
+  }
+
+
   let checkBox = document.getElementById("checkBox").checked;
   if (checkBox != true) {
     errors.checkbox = "You need to agree terms";
