@@ -166,33 +166,20 @@ formElement.addEventListener("submit", function (e) {
     errors.lastName = "Please enter you lastname";
   }
 
-  let passwordValue = document.getElementById("password").value;
-  let passwordRepeat = document.getElementById("repeatPassword").value;
-  let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
-  let passwordLine = document.getElementById("password");
-  let repPasswordLine = document.getElementById("repeatPassword");
 
-  if (passwordValue == "") {
-    // errors.passw1 = "Please enter you password";
-    passwordLine.style.border = "2px solid red";
-    return alert("Please enter you password");
-  } else if (!passwordValue.match(passwordRegex)) {
-    errors.passw1 = "6-20 symbol {A-z & Number(s)}";
-    passwordLine.style.border = "2px solid red";
-  } else {
-    passwordLine.style.border = "2px solid green";
+  if (password.value == "") {
+    errors.passw1 = "Please enter you password";
   }
 
-  if (passwordRepeat == "") {
-    return alert("Please repeat your password");
-  } else if (passwordValue != passwordRepeat) {
-    errors.passw2 = "Password is not match";
-    repPasswordLine.style.border = "2px solid red";
-  } else if (passwordRepeat == "") {
-    repPasswordLine.style.border = "2px solid red";
-  } else {
-    repPasswordLine.style.border = "2px solid green";
+  if (repPass.value == "") {
+    errors.passw2 = "Please repeat your password"
   }
+
+
+  if (email.value == "") {
+    errors.email = "Please enter your Email";
+  }
+
 
   let radio = false;
   formElement.querySelectorAll('[name="radio"]').forEach((gendreItems) => {
@@ -261,13 +248,15 @@ showIconRep.addEventListener("click", function () {
   }
 });
 
-let email = document.getElementById("email");
+
+// --- email keyup
+const email = document.getElementById("Email");
 
 function emailValidation() {
   let emailValue = email.value;
   let emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  let emailPelement = document.getElementById("valiEemail");
+  let emailPelement = document.getElementById("error-email");
 
   if (emailValue.match(emailRegex)) {
     emailPelement.textContent = "Email is Valid";
@@ -287,9 +276,59 @@ function emailValidation() {
 
 email.addEventListener("keyup", emailValidation);
 
-// const allInputElements = document.querySelectorAll(".section__2--inputs");
-// const reset = document.querySelector(".reset-btn");
-// reset.addEventListener("click", function () {
-//   // formElement.reset();
-//   allInputElements.style.border = "1px solid #bdbdbd";
-// });
+
+// ---pass keyup
+const password = document.getElementById("password");
+
+function passwordChecker () {
+  let passwordValue = document.getElementById("password").value;
+  let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+  let passwordLine = document.getElementById("password");
+  let passwordPElement = document.getElementById("error-passw1");
+
+ if (!passwordValue.match(passwordRegex)) {
+    passwordPElement.textContent = "6-20 symbol {A-z & Number(s)}";
+    passwordLine.style.border = "2px solid red";
+  } else {
+    passwordPElement.textContent = "";
+    passwordLine.style.border = "2px solid green";
+  }
+
+  if (passwordValue == ""){
+    passwordPElement.textContent = "";
+    passwordLine.style.border = "1px solid #bdbdbd";
+  }
+
+}
+
+password.addEventListener("keyup", passwordChecker);
+
+
+// --- rep pass keyup
+
+const repPass = document.getElementById("repeatPassword");
+
+function perPasswordChecker () {
+
+  let repPassValue = repPass.value;
+  let repPassLine = document.getElementById("repeatPassword");
+  let repPassworPElement = document.getElementById("error-passw2");
+
+  if (repPassValue != password.value){
+    repPassworPElement.textContent = "Password is not match";
+    repPassLine.style.border = "2px solid red";
+  }
+  else {
+    repPassworPElement.textContent = "";
+    repPassLine.style.border = "2px solid green";
+  }
+
+  if(repPassValue == ""){
+    repPassworPElement.textContent = "";
+    repPassLine.style.border = "1px solid #bdbdbd";
+  }
+
+}
+
+repPass.addEventListener("keyup", perPasswordChecker);
+
