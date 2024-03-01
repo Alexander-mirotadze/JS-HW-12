@@ -175,6 +175,12 @@ formElement.addEventListener("submit", function (e) {
     errors.passw2 = "Please repeat your password"
   }
 
+  if(password.value != repPass.value){
+    errors.passw2 = "Password is not match";
+    repPassLine.style.border = "2px solid red";
+  }else{
+    repPassLine.style.border = "2px solid green";}
+
 
   if (email.value == "") {
     errors.email = "Please enter your Email";
@@ -285,12 +291,15 @@ email.addEventListener("keyup", emailValidation);
 
 // ---pass keyup
 const password = document.getElementById("password");
+const passwordLine = document.getElementById("password");
+
 
 function passwordChecker () {
   let passwordValue = document.getElementById("password").value;
   let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
-  let passwordLine = document.getElementById("password");
   let passwordPElement = document.getElementById("error-passw1");
+
+  let repPassworPElement = document.getElementById("error-passw2");
 
  if (!passwordValue.match(passwordRegex)) {
     passwordPElement.textContent = "6-20 symbol {A-z & Number(s)}";
@@ -298,6 +307,14 @@ function passwordChecker () {
   } else {
     passwordPElement.textContent = "";
     passwordLine.style.border = "2px solid green";
+  }
+  
+  if(password.value != repPass.value){
+    repPassLine.style.border = "2px solid red";
+    repPassworPElement.textContent = "Password is not match";
+  }else{
+    repPassLine.style.border = "2px solid green";
+    repPassworPElement.textContent = "";
   }
 
   if (passwordValue == ""){
@@ -313,11 +330,12 @@ password.addEventListener("keyup", passwordChecker);
 // --- rep pass keyup
 
 const repPass = document.getElementById("repeatPassword");
+const repPassLine = document.getElementById("repeatPassword");
+
 
 function perPasswordChecker () {
 
   let repPassValue = repPass.value;
-  let repPassLine = document.getElementById("repeatPassword");
   let repPassworPElement = document.getElementById("error-passw2");
 
   if (repPassValue != password.value){
